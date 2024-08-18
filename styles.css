@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('pbo.webp') no-repeat center center fixed; 
+    background-size: cover;
+    filter: blur(1px); /* Apply blur to the background image */
+}
+
+.calculator {
+    border: 1px solid #e5e9f3;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px; /* Increased width */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); /* Increased shadow */
+    background:transparent; /* Ensures the calculator background is opaque */
+    position: relative;
+    z-index: 1; /* Makes sure the calculator is above the blurred background */
+}
+
+#display {
+    width: calc(100% - 20px);
+    height: 50px; /* Increased height */
+    margin-bottom: 15px; /* Increased margin */
+    font-size: 2em; /* Increased font size */
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Increased gap */
+}
+
+button {
+    padding: 15px; /* Increased padding */
+    font-size: 1.5em; /* Increased font size */
+    border: none;
+    background-color: #ff0101da;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #eaff00b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
